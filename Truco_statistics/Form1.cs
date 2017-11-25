@@ -20,12 +20,12 @@ namespace Truco_statistics
         private void btnDo_Click(object sender, EventArgs e)
         {
             Deck myDeck = new Deck();
-            card myCard = new card();
+            Card myCard = new Card();
 
 
-            myDeck.buildDeck();
+            myDeck.BuildDeck();
 
-            myCard = myDeck.getCard(int.Parse(txtIndex.Text));
+            myCard = myDeck.GetCard(int.Parse(txtIndex.Text));
 
 
             lblRank.Text = myCard.GetRank();
@@ -35,13 +35,13 @@ namespace Truco_statistics
         private void btnShuffle_Click(object sender, EventArgs e)
         {
             Deck myDeck = new Deck();
-            card myCard = new card();
+            Card myCard = new Card();
 
-            myDeck.buildDeck();
+            myDeck.BuildDeck();
 
             myDeck.ShuffleDeck();
 
-            myCard = myDeck.getCard(int.Parse(txtIndex.Text));
+            myCard = myDeck.GetCard(int.Parse(txtIndex.Text));
 
             lblRank.Text = myCard.GetRank();
             lblSuit.Text = myCard.GetSuit();
